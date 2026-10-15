@@ -50,9 +50,9 @@
   "sideEffects": false,
   "scripts": {
     "prebuild": "node scripts/sync-version.mjs",
-    "build": "tsc -p tsconfig.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.umd.json",
-    "build:strict-consumer": "tsc -p tests/fixtures/strict-consumer/tsconfig.json",
-    "build:bundle": "node scripts/build-bundle.mjs",
+    "build": "node init && tsc -p tsconfig.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.umd.json",
+    "build:strict-consumer": "node init && tsc -p tests/fixtures/strict-consumer/tsconfig.json",
+    "build:bundle": "node init && node scripts/build-bundle.mjs",
     "bundle:analyze": "node scripts/build-bundle.mjs --analyze",
     "bundle:check": "npm run build:bundle && node scripts/check-bundle-size.mjs",
     "test": "vitest run",
@@ -60,7 +60,7 @@
     "lint": "eslint --ext .ts src/"
   },
   "devDependencies": {
-    "@types/node": "^20.11.5",
+    "@types/node": "^26.6.5",
     "@typescript-eslint/parser": "^8.62.0",
     "esbuild": "^0.28.1",
     "eslint": "^8.56.0",
