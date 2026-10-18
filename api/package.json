@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
-    "start": "node dist/index.js",
-    "dev": "tsx watch src/index.ts",
+    "build": "node init && tsc -p tsconfig.build.json",
+    "start": "node init && node dist/index.js",
+    "dev": "node init && tsx watch src/index.ts",
     "test": "vitest run",
     "test:webhook-sim": "vitest run tests/webhook.sim.test.ts",
     "test:e2e": "vitest run --config vitest.e2e.config.ts",

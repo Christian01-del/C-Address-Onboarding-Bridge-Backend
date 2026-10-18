@@ -9,8 +9,6 @@ coverage/
 target/
 
 # Environment / secrets
-.env
-.env.local
 .env.*.local
 *.local
 *.log
@@ -22,9 +20,6 @@ Thumbs.db
 
 # Editor artefacts
 .idea/
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
 
 # Test snapshots and results
 __snapshots__/
@@ -52,6 +47,7 @@ deployments/blue-green-state.txt
 # Migration state (legacy file-based state — superseded by schema_migrations table)
 .migration-state.json
 *.migration-state.json
+temp_auto_push.bat
 
 # Reports
 reports/
@@ -104,3 +100,6 @@ WEBHOOK_RATE_LIMIT_FIX.md
 WEBHOOK_RATE_LIMIT_FIX_IMPLEMENTATION.md
 OPENAPI_DOCUMENTATION_GAP.md
 CORS_METHODS_FIX.md
+.gitignore
+branch_structure.json
+config.bat
